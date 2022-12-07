@@ -25,7 +25,7 @@ with col4:
 
 
 with st.container():
-    st.sidebar.write('Special thanks to the team at [Openbb](https://openbb.co/) Excited to see what the future holds as the lead the way in open source investment research!'
+    st.sidebar.write('Special thanks to the team at [Openbb](https://openbb.co/) Excited to see what the future holds as the lead the way in open source investment research!')
                      
     st.sidebar.write('Feel free to reach [out](https://twitter.com/DirtyDefi) I love talking anything markets and programming.')
                      
