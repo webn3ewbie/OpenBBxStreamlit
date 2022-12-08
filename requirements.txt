@@ -129,7 +129,7 @@ numpy==1.23.4
 oandapyV20==0.6.3
 oauthlib==3.2.2
 onetimepass==1.0.1
-openbb==0.0.1
+openbb
 openpyxl==3.0.10
 packaging==21.3
 pandas==1.5.2
