@@ -1,5 +1,5 @@
 streamlit
 pandas
-openbb
+openbb_terminal.sdk
 plotly
 matplotlib
