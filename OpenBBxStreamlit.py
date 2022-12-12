@@ -181,3 +181,12 @@ with col2:
     st.subheader('Customers of {}'.format(text_input))
     st.dataframe(openbb.stocks.dd.customer(text_input))
     
+    
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+    
