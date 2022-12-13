@@ -17,5 +17,5 @@ Simple financial dashboard powered by OpenBB and Streamlit. App displays stocks,
 </ul>
 
 <br>
-<h3> https://openbb.co/ <h3>
-<h3> Streamlit : https://www.streamlit.io/ </h3>
+<h3> OpenBB: https://openbb.co/ <h3>
+<h3> Streamlit: https://www.streamlit.io/ </h3>
