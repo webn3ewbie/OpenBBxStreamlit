@@ -26,8 +26,14 @@ openbb = Breadcrumb(
 
 st.set_page_config(
 layout="wide",
-page_title="OpenBBxStreamlit"
-)
+page_title="OpenBBxStreamlit")
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 col1, col2, col3, col4 = st.columns([25,11,4,10])
 with col1:
