@@ -183,10 +183,4 @@ with col2:
     
     
     
-hide_streamlit_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+st.pyplot(openbb.crypto.ov.btcrb_chart(start_date = "2010-01-01"))
