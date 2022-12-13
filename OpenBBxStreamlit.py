@@ -151,7 +151,7 @@ with col1:
     data['mcap_change_24h'] = data['mcap_change_24h' ].apply(pd.to_numeric)
     data['pct_change_1h'] = data['pct_change_1h' ].apply(pd.to_numeric)
     data['pct_from_ath'] = data['pct_from_ath' ].apply(pd.to_numeric)
-    st.dataframe(data.style.applymap(color_negative_red, subset=['pct_change_24h','mcap_change_24h','pct_change_1h','pct_from_ath'],sortby = "rank"))  
+    st.dataframe(data.style.applymap(color_negative_red, subset=['pct_change_24h','mcap_change_24h','pct_change_1h','pct_from_ath'](sortby  = "rank", ascend  = True, limit  = 15, export  = ""))) 
 with col2:
     st.subheader('Crypto Hacks')
     st.dataframe(openbb.crypto.ov.crypto_hacks())
