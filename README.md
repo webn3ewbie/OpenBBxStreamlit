@@ -13,9 +13,8 @@ Simple financial dashboard powered by OpenBB and Streamlit. App displays stocks,
  <ul style="FUTURE Features:square;">
   <li>Addition of Assest Fundemental Analysis </li>
   <li>Addition of Technical Analysis scanner </li>
-  <li>Inclusion of alternative data, including a live newsfeed </li>
+  <li>Addition of a live newsfeed </li>
 </ul>
-
 <br>
 <h3> OpenBB: https://openbb.co/ <h3>
 <h3> Streamlit: https://www.streamlit.io/ </h3>
