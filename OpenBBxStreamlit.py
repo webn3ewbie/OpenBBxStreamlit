@@ -147,12 +147,12 @@ with col2:
 col1,col2=st.columns([50,50])
 with col1:
     st.subheader('Top Cryptos')
-    data = openbb.crypto.ov.markets(limit=1000)
+    data = openbb.crypto.ov.markets()
     data['pct_change_24h'] = data['pct_change_24h' ].apply(pd.to_numeric)
     data['mcap_change_24h'] = data['mcap_change_24h' ].apply(pd.to_numeric)
     data['pct_change_1h'] = data['pct_change_1h' ].apply(pd.to_numeric)
     data['pct_from_ath'] = data['pct_from_ath' ].apply(pd.to_numeric)
-    st.dataframe(data.style.applymap(color_negative_red, subset=['pct_change_24h','mcap_change_24h','pct_change_1h','pct_from_ath']))   
+    st.dataframe(data.style.applymap(color_negative_red, subset=['pct_change_24h','mcap_change_24h','pct_change_1h','pct_from_ath'],limit=1000))   
 with col2:
     st.subheader('Crypto Hacks')
     st.dataframe(openbb.crypto.ov.crypto_hacks())
