@@ -51,7 +51,7 @@ with st.container():
                      
     st.sidebar.write('Feel free to reach [out](https://twitter.com/DirtyDefi) I love talking anything markets and programming.')
                      
-    st.sidebar.write('Please note this app is NOT financial advice. The dashboards is NOT intended to help guide financial decisions!')
+    st.sidebar.write('Please note this app is NOT financial advice. The dashboard is NOT intended to help guide financial decisions!')
     
 
 def color_negative_red(val):
