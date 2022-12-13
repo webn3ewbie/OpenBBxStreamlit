@@ -1,5 +1,6 @@
 import streamlit as st 
 import pandas as pd
+from openbb_terminal.sdk import openbb
 from openbb_terminal.config_terminal import theme  # noqa: F401
 from openbb_terminal.helper_classes import TerminalStyle
 from openbb_terminal import helper_funcs as helper  # noqa: F401
