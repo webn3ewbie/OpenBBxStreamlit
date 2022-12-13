@@ -8,7 +8,6 @@ from openbb_terminal.reports import widget_helpers as widgets  # noqa: F401
 from openbb_terminal.cryptocurrency.due_diligence.pycoingecko_model import (  # noqa: F401
     Coin,
 )
-
 from openbb_terminal.core.library.breadcrumb import Breadcrumb
 from openbb_terminal.core.library.trail_map import TrailMap
 from openbb_terminal.core.library.breadcrumb import MetadataBuilder
@@ -180,7 +179,3 @@ with col1:
 with col2:
     st.subheader('Customers of {}'.format(text_input))
     st.dataframe(openbb.stocks.dd.customer(text_input))
-    
-    
-    
-st.pyplot(openbb.crypto.ov.btcrb_chart(start_date = "2010-01-01"))
