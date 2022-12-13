@@ -147,7 +147,7 @@ with col2:
 col1,col2=st.columns([50,50])
 with col1:
     st.subheader('Top Cryptos')
-    data = openbb.crypto.ov.markets()
+    data = openbb.crypto.ov.markets(limit=1000)
     data['pct_change_24h'] = data['pct_change_24h' ].apply(pd.to_numeric)
     data['mcap_change_24h'] = data['mcap_change_24h' ].apply(pd.to_numeric)
     data['pct_change_1h'] = data['pct_change_1h' ].apply(pd.to_numeric)
