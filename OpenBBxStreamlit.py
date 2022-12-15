@@ -24,8 +24,7 @@ openbb = Breadcrumb(
 )
 
 st.set_page_config(
-layout="wide",
-page_title="OpenBBxStreamlit")
+layout="wide")
 st.set_option('deprecation.showPyplotGlobalUse', False)
 col1, col2, col3, col4 = st.columns([25,11,4,10])
 with col1:
