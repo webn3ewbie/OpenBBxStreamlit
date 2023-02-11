@@ -20,7 +20,7 @@ metadata = MetadataBuilder.build(trail=trail, trail_map=trail_map)
 
 st.set_page_config(
 layout="wide",
-page_title="Joseph Biancamano", 
+page_title="OpenBB X Streamlit", 
 )
 hide_streamlit_style = """
             <style>
