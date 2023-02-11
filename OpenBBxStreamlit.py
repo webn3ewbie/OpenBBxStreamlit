@@ -17,11 +17,7 @@ trail = ""
 trail_map = TrailMap()
 metadata = MetadataBuilder.build(trail=trail, trail_map=trail_map)
 
-openbb = Breadcrumb(
-    metadata=metadata,
-    trail=trail,
-    trail_map=trail_map,
-)
+
 st.set_page_config(
 layout="wide",
 page_title="Joseph Biancamano", 
