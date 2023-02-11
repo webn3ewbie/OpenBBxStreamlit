@@ -22,10 +22,17 @@ openbb = Breadcrumb(
     trail=trail,
     trail_map=trail_map,
 )
-
 st.set_page_config(
-page_title="OenBB X Streamlit",
-layout="wide")
+layout="wide",
+page_title="Joseph Biancamano", 
+)
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 col1, col2, col3, col4 = st.columns([25,11,4,10])
 with col1:
@@ -46,11 +53,11 @@ with col4:
 
 
 with st.container():
-    st.sidebar.write('Special thanks to the team at [Openbb](https://openbb.co/) Excited to see what the future holds as the team and community lead the way in open source investment research!')
+    st.sidebar.write('Special thanks to the team at [Openbb](https://openbb.co/) Excited to see what the future holds as the lead the way in open source investment research!')
                      
     st.sidebar.write('Feel free to reach [out](https://twitter.com/DirtyDefi) I love talking anything markets and programming.')
                      
-    st.sidebar.write('Please note this app is NOT financial advice. The dashboard is NOT intended to help guide financial decisions!')    
+    st.sidebar.write('Please note this app is NOT financial advice. The dashboards is NOT intended to help guide financial decisions!')   
 
 def color_negative_red(val):
     if type(val) != 'str':
@@ -64,13 +71,11 @@ with col1:
     data[['Chng']] = data[['Chng']].apply(pd.to_numeric)
     data[['%Chng']] = data[['%Chng']].apply(pd.to_numeric)
     st.dataframe(data.style.applymap(color_negative_red, subset=['Chng','%Chng']))
-
 with col2:
     st.subheader('US Indices')
     data = openbb.economy.indices()
     data[['Chg','%Chg']] = data[['Chg','%Chg']].apply(pd.to_numeric)
-    st.dataframe(data.style.applymap(color_negative_red, subset=['Chg','%Chg']))
-   
+    st.dataframe(data.style.applymap(color_negative_red, subset=['Chg','%Chg']))   
 with col3:
     st.subheader('US Bonds')
     data = openbb.economy.usbonds()
@@ -78,17 +83,16 @@ with col3:
     data[data.columns[2]] = data[data.columns[2]].apply(pd.to_numeric)
     data[data.columns[3]] = data[data.columns[3]].apply(pd.to_numeric)
     columns = data.columns[3]
-    st.dataframe(data.style.applymap(color_negative_red, subset=[columns]))
-    
+    st.dataframe(data.style.applymap(color_negative_red, subset=[columns]))   
 col1, col2=st.columns([22,30])
 with col1:
     st.subheader('Commodities')
     data = openbb.economy.futures()
     data[['Chg','%Chg']] = data[['Chg','%Chg']].apply(pd.to_numeric)
-    st.dataframe(data.style.applymap(color_negative_red, subset=['Chg','%Chg']))    
+    st.dataframe(data.style.applymap(color_negative_red, subset=['Chg','%Chg'])) 
 with col2:
     st.subheader('Sectors') 
-    st.pyplot(openbb.economy.rtps_chart()) 
+    st.pyplot(openbb.economy.rtps_chart())
 st.title('Economy')
 col1,col2=st.columns([55,55]) 
 with col1:
@@ -104,7 +108,8 @@ st.title('Government Trading & Contracts')
 col1, col2=st.columns([50,50])
 with col1:
     st.subheader('Government contracts')
-    st.dataframe(openbb.stocks.gov.lastcontracts())   
+    st.dataframe(openbb.stocks.gov.lastcontracts())
+    
 with col2:
     st.subheader('Congress Latest Trades')
     st.write(openbb.stocks.gov.lasttrades()) 
@@ -112,7 +117,8 @@ with col2:
 col1, col2=st.columns([50,50])
 with col1:
     st.subheader('Senate Latest Trades')
-    st.pyplot(openbb.stocks.gov.topbuys_chart(gov_type = "senate", past_transactions_months  = 6))   
+    st.pyplot(openbb.stocks.gov.topbuys_chart(gov_type = "senate", past_transactions_months  = 6))
+    
 with col2:
     st.subheader('Senate Latest Trades')
     st.pyplot(openbb.stocks.gov.topsells_chart(gov_type = "senate", past_transactions_months  = 6))
@@ -163,21 +169,25 @@ if text_input:
     data = openbb.stocks.load(text_input)
     df_max_scaled = data.copy()
     st.pyplot(openbb.stocks.candle(symbol=text_input,ma = [50,150,200]))
-   
-col1, col2 = st.columns(2)
+    
+    col1, col2 = st.columns(2)
     with col1:
         st.subheader('Government Contracts for {}'.format(text_input))
         st.dataframe(openbb.stocks.gov.contracts(symbol=text_input))
+
     with col2:
         st.subheader('Insider Activity for {}'.format(text_input))
-        st.dataframe(openbb.stocks.ins.act(symbol=text_input))   
+        st.dataframe(openbb.stocks.ins.act(symbol=text_input))
+   
 col1, col2 = st.columns(2)
 with col1:
     st.subheader('Suppliers of {}'.format(text_input))
     st.dataframe(openbb.stocks.dd.supplier(text_input))
+
 with col2:
     st.subheader('Customers of {}'.format(text_input))
-    st.dataframe(openbb.stocks.dd.customer(text_input))    
+    st.dataframe(openbb.stocks.dd.customer(text_input))
+    
 col1, col2 = st.columns(2)
 with col1:
     st.subheader('Put/Call Ratio of {}'.format(text_input))
