@@ -88,7 +88,8 @@ with col1:
     st.dataframe(data.style.applymap(color_negative_red, subset=['Chg','%Chg'])) 
 with col2:
     st.subheader('Sectors') 
-    st.pyplot(openbb.economy.rtps_chart())
+    st.pyplot(openbb.economy.gdpc_chart())
+    
 st.title('Economy')
 col1,col2=st.columns([55,55]) 
 with col1:
