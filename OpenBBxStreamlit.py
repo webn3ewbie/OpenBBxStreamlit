@@ -92,7 +92,7 @@ with col2:
 st.title('Economy')
 col1,col2=st.columns([55,55]) 
 with col1:
-    st.pyplot(openbb.economy.inf_chart()) 
+    st.pyplot(openbb.openbb.economy.events()) 
 with col2:
     st.pyplot(openbb.economy.cpi_chart())   
 col1,col2=st.columns([55,55]) 
