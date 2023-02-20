@@ -93,7 +93,7 @@ with col2:
 st.title('Economy')
 col1,col2=st.columns([55,55]) 
 with col1:
-    st.pyplot(openbb.economy.fred_chart('CPIAUCSL')) 
+    st.pyplot(openbb.economy.fred_chart(series_ids=CPIAUCSL)) 
 with col2:
     st.pyplot(openbb.economy.fred_chart('FPCPITOTLZGUSA'))   
 col1,col2=st.columns([55,55]) 
