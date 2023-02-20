@@ -180,7 +180,7 @@ if text_input:
 col1, col2 = st.columns(2)
 with col1:
     st.subheader('Suppliers of {}'.format(text_input))
-    st.dataframe(openbb.stocks.dd.supplier(text_input))
+    st.dataframe(openbb.stocks.fa.supplier(symbol=text_input, limit= 50))
 
 with col2:
     st.subheader('Customers of {}'.format(text_input))
