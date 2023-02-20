@@ -184,7 +184,7 @@ with col1:
 
 with col2:
     st.subheader('Customers of {}'.format(text_input))
-    st.dataframe(openbb.stocks.dd.customer(text_input))
+    st.dataframe(openbb.stocks.fa.customer(symbol=text_input, limit= 50))
     
 col1, col2 = st.columns(2)
 with col1:
