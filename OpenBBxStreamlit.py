@@ -98,9 +98,9 @@ with col2:
     st.pyplot(openbb.economy.fred_chart('FPCPITOTLZGUSA'))   
 col1,col2=st.columns([55,55]) 
 with col1:
-    st.pyplot(openbb.economy.gdp_chart()) 
+    
 with col2:
-    st.pyplot(openbb.economy.unemp_chart())
+   
 st.title('Government Trading & Contracts')
 col1, col2=st.columns([50,50])
 with col1:
