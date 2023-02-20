@@ -98,10 +98,10 @@ with col2:
     st.pyplot(openbb.economy.fred_chart('FPCPITOTLZGUSA'))   
 col1,col2=st.columns([55,55]) 
 with col1:
-    st.write('how')
+    st.write('working')
     
 with col2:
-   st.write('how')
+   st.write('working')
 st.title('Government Trading & Contracts')
 col1, col2=st.columns([50,50])
 with col1:
