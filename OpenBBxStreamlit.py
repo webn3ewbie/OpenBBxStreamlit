@@ -16,7 +16,8 @@ TerminalStyle().applyMPLstyle()
 trail = ""
 trail_map = TrailMap()
 metadata = MetadataBuilder.build(trail=trail, trail_map=trail_map)
-
+KEY = '9cbe93cd8132301fd46ad5e755944df0'
+fred = Fred(api_key=KEY)
 
 st.set_page_config(
 layout="wide",
