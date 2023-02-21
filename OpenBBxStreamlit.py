@@ -12,6 +12,7 @@ from openbb_terminal.core.library.breadcrumb import Breadcrumb
 from openbb_terminal.core.library.trail_map import TrailMap
 from openbb_terminal.core.library.breadcrumb import MetadataBuilder
 
+openbb.keys.fred(key = '9cbe93cd8132301fd46ad5e755944df0', persist = True)
 TerminalStyle().applyMPLstyle()
 trail = ""
 trail_map = TrailMap()
