@@ -166,7 +166,7 @@ text_input = st.text_input('Symbol')
 if text_input:
     data = openbb.stocks.load(text_input)
     df_max_scaled = data.copy()
-    st.pyplot(openbb.stocks.candle(symbol=text_input, ma = [50,150]))
+    st.pyplot(openbb.stocks.candle(symbol=text_input))
     
     col1, col2 = st.columns(2)
     with col1:
