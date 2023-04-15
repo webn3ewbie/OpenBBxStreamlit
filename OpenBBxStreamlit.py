@@ -196,14 +196,9 @@ with col2:
     st.subheader('Vol Surface of {}'.format(text_input))
     st.pyplot(openbb.stocks.options.vsurf_chart(symbol=text_input))
     
-col1, col2, col3 = st.columns([30,30,30])
-with col1:
-    st.write
-with col2:
-    st.pyplot(openbb.stocks.gov.gtrades_chart(symbol=text_input, gov_type = 'congress'))
+st.pyplot(openbb.stocks.gov.gtrades_chart(symbol=text_input, gov_type = 'congress'))
     
-with col3:
-    
+
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
