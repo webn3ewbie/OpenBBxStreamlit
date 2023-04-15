@@ -89,7 +89,7 @@ with col2:
     
 with col3:
     st.subheader('Economic Events')
-    st.dataframe(openbb.economy.events())
+    st.dataframe(openbb.economy.events(start_date = '2023-04-14', end_date = '2023-04-14')))
     
 st.title('Economy')
 col1,col2=st.columns([55,55]) 
