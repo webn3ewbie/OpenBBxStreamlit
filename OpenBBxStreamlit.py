@@ -89,7 +89,7 @@ with col2:
     
 with col3:
     st.subheader('Economic Events')
-    st.dataframe(openbb.economy.events(start_date = '2023-04-14', end_date = '2023-04-14'))
+    st.dataframe(openbb.economy.events())
     
 st.title('Economy')
 col1,col2=st.columns([55,55]) 
@@ -195,6 +195,7 @@ with col1:
 with col2:
     st.subheader('Vol Surface of {}'.format(text_input))
     st.pyplot(openbb.stocks.options.vsurf_chart(symbol=text_input))
+    
 col1, col2, col3 = st.columns([30,30,30])
 with col1:
     st.write
