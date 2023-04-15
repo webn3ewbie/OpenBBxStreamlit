@@ -200,7 +200,9 @@ with col1:
     
 with col2:
     st.pyplot(openbb.stocks.gov.gtrades_chart(symbol=text_input, gov_type = 'congress'))
+    
 with col3:
+    
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
