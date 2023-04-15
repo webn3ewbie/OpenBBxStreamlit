@@ -77,7 +77,7 @@ with col3:
     data[data.columns[3]] = data[data.columns[3]].apply(pd.to_numeric)
     columns = data.columns[3]
     st.dataframe(data.style.applymap(color_negative_red, subset=[columns]))   
-col1, col2=st.columns([22,30])
+col1, col2, col3 = st.columns([30,30,30])
 with col1:
     st.subheader('Commodities')
     data = openbb.economy.futures()
@@ -86,6 +86,10 @@ with col1:
 with col2:
     st.subheader('Sectors') 
     st.pyplot(openbb.economy.rtps_chart())
+    
+with col3:
+    st.subheader('Economic Events')
+    st.dataframe(openbb.economy.events())
     
 st.title('Economy')
 col1,col2=st.columns([55,55]) 
