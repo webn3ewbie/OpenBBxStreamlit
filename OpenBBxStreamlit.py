@@ -1,5 +1,4 @@
 import os
-
 import pandas as pd
 import streamlit as st
 from openbb_terminal.core.plots.plotly_helper import OpenBBFigure, theme  # noqa: F401
@@ -335,11 +334,3 @@ if text_input:
             )
         )
 
-
-hide_streamlit_style = """
-<style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-</style>
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
