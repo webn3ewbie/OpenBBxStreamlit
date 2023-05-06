@@ -1,3 +1,5 @@
 streamlit
 pandas
 openbb==3.0.0rc2
+plotly
+pycairo
