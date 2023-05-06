@@ -14,15 +14,6 @@ st.set_page_config(
     page_title="OpenBB X Streamlit",
 )
 
-hide_streamlit_style = """
-    <style>
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-    </style>
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
-
 def display_chart(fig: OpenBBFigure, nticks: bool = True):
     if not isinstance(fig, OpenBBFigure):
         return st.write("No data available")
