@@ -1,5 +1,5 @@
 streamlit
 pandas
-openbb==3.0.0rc2
+openbb==3.0.0
 plotly
 pycairo
