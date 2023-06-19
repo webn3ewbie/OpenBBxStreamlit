@@ -11,8 +11,7 @@ from openbb_terminal.cryptocurrency.due_diligence.pycoingecko_model import (  # 
 from openbb_terminal.core.library.breadcrumb import Breadcrumb
 from openbb_terminal.core.library.trail_map import TrailMap
 from openbb_terminal.core.library.breadcrumb import MetadataBuilder
-FRED_KEY = os.environ.get("FRED_KEY", "REPLACE_ME")
- openbb.keys.fred(key=FRED_KEY, persist=True)
+openbb.keys.fred(key=FRED_KEY, persist=True)
 TerminalStyle().applyMPLstyle()
 st.set_page_config(
 layout="wide",
