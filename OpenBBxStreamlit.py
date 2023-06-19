@@ -1,16 +1,6 @@
 import streamlit as st 
 import pandas as pd
 from openbb_terminal.sdk import openbb
-from openbb_terminal.config_terminal import theme  # noqa: F401
-from openbb_terminal.helper_classes import TerminalStyle
-from openbb_terminal import helper_funcs as helper  # noqa: F401
-from openbb_terminal.reports import widget_helpers as widgets  # noqa: F401
-from openbb_terminal.cryptocurrency.due_diligence.pycoingecko_model import (  # noqa: F401
-    Coin,
-)
-from openbb_terminal.core.library.breadcrumb import Breadcrumb
-from openbb_terminal.core.library.trail_map import TrailMap
-from openbb_terminal.core.library.breadcrumb import MetadataBuilder
 openbb.keys.fred(key = '9cbe93cd8132301fd46ad5e755944df0', persist = True)
 TerminalStyle().applyMPLstyle()
 st.set_page_config(
