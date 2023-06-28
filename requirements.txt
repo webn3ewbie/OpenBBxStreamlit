@@ -2,3 +2,4 @@ streamlit
 pandas
 openbb==3.0.0
 plotly
+arch
