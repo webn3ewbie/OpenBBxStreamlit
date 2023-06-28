@@ -1,6 +1,8 @@
 import streamlit as st 
 import pandas as pd
 from openbb_terminal.sdk import openbb
+from openbb_terminal.sdk import TerminalStyle
+
 openbb.keys.fred(key = '9cbe93cd8132301fd46ad5e755944df0', persist = True)
 TerminalStyle().applyMPLstyle()
 st.set_page_config(
@@ -175,11 +177,11 @@ with col2:
      st.subheader('Vol Surface of {}'.format(text_input))
      st.pyplot(openbb.stocks.options.vsurf_chart(symbol=text_input))
 
- col1, col2, col3 = st.columns([30,30,30])
- with col1:
-     st.write
- with col2:
-     st.pyplot(openbb.stocks.gov.gtrades_chart(symbol=text_input, gov_type = 'congress'))
+col1, col2, col3 = st.columns([30,30,30])
+with col1:
+    st.write
+with col2:
+    st.pyplot(openbb.stocks.gov.gtrades_chart(symbol=text_input, gov_type = 'congress'))
 
- with col3:
- st.pyplot(openbb.stocks.gov.gtrades_chart(symbol=text_input, gov_type = 'congress'))
+with col3:
+st.pyplot(openbb.stocks.gov.gtrades_chart(symbol=text_input, gov_type = 'congress'))
